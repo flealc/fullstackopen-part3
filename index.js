@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 
-let phones = [
+app.use(express.json())
+let persons = [
         { 
           "id": 1,
           "name": "Arto Hellas", 
@@ -23,3 +24,16 @@ let phones = [
           "number": "39-23-6423122"
         }
 ]
+
+app.get('/', (request, response) => {
+    response.send('<h1>Ring Ring</h1>')
+})
+
+app.get('/api/persons', (request, response) => {
+    response.json(persons)
+})
+
+const PORT = 3001
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+})
