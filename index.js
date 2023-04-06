@@ -65,7 +65,7 @@ app.post('/api/persons', (request, response) => {
     const newId =  Math.floor(Math.random() * (5, 5000) + 5)
     
     if (!body.name || !body.number) {
-        return response.status(404).json({
+        return response.status(400).json({
             error: "name or number is missing"
         })
     }
