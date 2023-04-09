@@ -50,18 +50,21 @@ app.get('/', (request, response) => {
 })
 
 app.get('/api/persons', (request, response) => {
-    Person.find({}).then(people => {
-        response.json(people)
+    Person.find({}).then(persons => {
+        response.json(persons)
     })
 })
 
 app.get('/info', (request, response) => {
-    const size = persons.length 
+
     const date = new Date().toString()
-    response.send(`
-        <p>Phonebook has info for ${size} people</p>
+
+    Person.find({}).then(people => {
+        response.send(`
+        <p>Phonebook has info for ${people.length} people</p>
         <p>${date}</p>
         `)
+    })
 })
 
 app.get('/api/persons/:id', (request, response, next) => {
