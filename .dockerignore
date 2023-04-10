@@ -7,3 +7,4 @@ README.md
 .env
 .gitignore
 .eslintrc.js
+.eslintignore

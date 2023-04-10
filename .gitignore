@@ -3,3 +3,4 @@ node_modules
 .dockerignore
 .gitignore
 .eslintrc.js
+.eslintignore
