@@ -1,0 +1,17 @@
+POST https://bold-morning-2153.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "Mikey Zbond",
+    "number": "112-2334455"
+}
+
+###
+
+GET https://bold-morning-2153.fly.dev/api/persons
+
+###
+DELETE https://bold-morning-2153.fly.dev/api/persons/1377
+
+### 
+http://localhost:3001/api/persons
